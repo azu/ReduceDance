@@ -1,0 +1,7 @@
+# ReduceDance
+
+スライドのサンプルコード
+
+## License
+
+MIT
