@@ -5,7 +5,7 @@ assert.ng = function(value, message){
 /*
 
     * ``reduce`` があれば、補完mapやeveryなどは実装できる
-    * 柔軟性が高い関数
+    * 柔軟性が高い
 
 > このうちreduceが一番強力で、mapやfilterやsumなど、他の関数もこれをもとに定義できます
 
@@ -13,11 +13,11 @@ via [Functional JavaScript](https://gist.github.com/ympbyc/5564146 "Functional J
 
 */
 function every(array, predicate) {
-    return array.reduce(function (previousValue, currentValue, index, list) {
-        if (previousValue) {
-            return predicate(currentValue, index, list);
+    return array.reduce(function (prev, current, index, list) {
+        if (prev) {
+            return predicate(current, index, list);
         } else {
-            return previousValue;
+            return prev;
         }
     }, true);
 }
